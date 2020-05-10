@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int LongitudI(char cad[100],int x){
+	int s=0;
+	for (int i=0;cad[i]!='\0';i++){
+		s=s+1;
+
+	}
+	return s;
+}
+int LongitudR(char cad[100],int x){
+	int s=0;
+	if(cad[x]=='\0'){
+		return s;
+	}
+	return s+1+LongitudR(cad,x+1);
+
+}
+int main(){
+	char cad[100]="palabra";
+	int longitud,x=0;
+	cout<<LongitudR(cad,x)<<endl;
+	cout<<LongitudI(cad,x)<<endl;
+
+}
